@@ -1,0 +1,22 @@
+{
+  "name": "node_js_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omar-khaled-coder/Node_js_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omar-khaled-coder/Node_js_demo/issues"
+  },
+  "homepage": "https://github.com/omar-khaled-coder/Node_js_demo#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
