@@ -18,6 +18,7 @@
   "homepage": "https://github.com/omar-khaled-coder/Node_js_demo#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.16.2"
   }
 }

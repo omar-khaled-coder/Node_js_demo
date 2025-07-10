@@ -1,6 +1,18 @@
 const express = require("express");
+const mongoose = require("mongoose");
 
 const app = express()
+
+mongoose.connect("mongodb+srv://omarkh3010:<///>@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+.then(() => {
+
+  console.log("Conected successfully")
+
+}).catch((error) =>{
+
+  console.log("error with conccteing with the Database", error)
+});
+
 app.use(express.json());
 
 app.get("/hello", function name(req, res) {
