@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 
 const app = express()
 
-mongoose.connect("mongodb+srv://omarkh3010:<///>@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+const Article = require("./models/Article");
+
+mongoose.connect("mongodb+srv://omarkh3010:Omar2007@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
 
   console.log("Conected successfully")
@@ -50,6 +52,18 @@ app.get("/numbers", function name(req, res) {
     name: "omar"
   })
 });
+
+//====== ARTICLES ENDPOINTS =======
+
+app.post("/articles", async (req,res) => {
+
+  const newArticle = new Article()
+  newArticle.title = "my new article"
+  newArticle.body = "this is ther body"
+  newArticle.numberOfLikes = 100
+  await newArticle.save()
+  res.send("articles");
+})
 
 app.listen(3000, function name(params) {
   console.log ("i am listing in port 3000")
