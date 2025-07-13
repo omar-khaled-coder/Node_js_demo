@@ -5,7 +5,7 @@ const app = express()
 
 const Article = require("./models/Article");
 
-mongoose.connect("mongodb+srv://omarkh3010:////@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://omarkh3010:Omar2007@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
 
   console.log("Conected successfully")
@@ -63,7 +63,24 @@ app.post("/articles", async (req,res) => {
   newArticle.numberOfLikes = 100
   await newArticle.save()
   res.send("articles");
-})
+});
+
+
+app.get("/articles", async (req, res) => {
+	const articles = await Article.find();
+	console.log("the articles are", articles);
+
+	res.json(articles);
+});
+
+
+app.get("/showArticles", async (req, res) => {
+	const articles = await Article.find();
+
+	res.render("articles.ejs", {
+		allArticles: articles,
+	});
+});
 
 app.listen(3000, function name(params) {
   console.log ("i am listing in port 3000")
