@@ -5,7 +5,7 @@ const app = express()
 
 const Article = require("./models/Article");
 
-mongoose.connect("mongodb+srv://omarkh3010:Omar2007@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://omarkh3010:///@cluster0.laojrvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
 
   console.log("Conected successfully")
